@@ -2,18 +2,8 @@
 #include <string>
 #include <windows.h>
 #include "VxmDriver.h"
+#include "commons.h"
 using namespace std;
-
-void init(){
-	LoadDriver("C:\\Users\\User\\Desktop\\Work\\VXM\\VxmDriver.dll");
-	PortOpen(3, 9600);
-	PortClear();
-}
-
-void cleanup(){
-	PortClose();
-	ReleaseDriver();
-}
 
 int main(int argc, char *argv[]) {
 	if(argc<2){
@@ -30,7 +20,7 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
     init();
-	string step = to_string((int)(speed*20));
+	string step = to_string((int)(speed*7200/60));
 	PortSendCommands(&("C,S1M"+step+",R")[0]);
 	PortWaitForChar("^", 0);
 	cleanup();

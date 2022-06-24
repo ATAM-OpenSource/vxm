@@ -11,16 +11,21 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	string input = string(argv[1]);
+	int acc;
 	try {
-		int i = stoi(input);
+		acc = stoi(input);
+		if(1>acc || 127<acc){
+			throw;
+		}
 	}
 	catch (...){
-		cerr << "Please enter an integer!\n";
+		cerr << "Please enter a valid integer!\n";
 		return 0;
 	}
     init();
-    PortSendCommands(&("C,I1M"+input+",R")[0]);
-    //PortWaitForChar("^", 0);
+	string step = to_string((int)(acc*20));
+	PortSendCommands(&("C,A1M"+step+",R")[0]);
+	PortWaitForChar("^", 0);
 	cleanup();
     return 0;
 }

@@ -5,7 +5,7 @@
 using namespace std;
 
 void init(){
-	LoadDriver("C:\\Users\\User\\Desktop\\Work\\VXM\\VxmDriver.dll");
+	LoadDriver("VxmDriver.dll");
 	PortOpen(3, 9600);
 	PortClear();
     PortSendCommands("F,C,R");

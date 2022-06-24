@@ -2,18 +2,8 @@
 #include <string>
 #include <windows.h>
 #include "VxmDriver.h"
+#include "commons.h"
 using namespace std;
-
-void init(){
-	LoadDriver("C:\\Users\\User\\Desktop\\Work\\VXM\\VxmDriver.dll");
-	PortOpen(3, 9600);
-	PortClear();
-}
-
-void cleanup(){
-	PortClose();
-	ReleaseDriver();
-}
 
 int main(int argc, char *argv[]) {
 	if(argc<2){

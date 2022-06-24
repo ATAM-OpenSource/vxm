@@ -11,16 +11,21 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	string input = string(argv[1]);
+	int i;
 	try {
-		int i = stoi(input);
+		i = stoi(input);
 	}
 	catch (...){
 		cerr << "Please enter an integer!\n";
 		return 0;
 	}
     init();
-    PortSendCommands(&("C,I1M"+input+",R")[0]);
-    //PortWaitForChar("^", 0);
+	if (i!=0){
+		PortSendCommands(&("C,I1M"+input+",R")[0]);
+		PortWaitForChar("^", 0);
+	}
+    PortSendCommands("C,IA1M-0,R");
+    PortWaitForChar("^", 0);
 	cleanup();
     return 0;
 }
