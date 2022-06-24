@@ -9,7 +9,7 @@ int main ()
     
   double tlim=56.4,mlim=11.3,t,l,m;
   
-  cout << "\t Welcome to WXM Moment Calculation ";
+  cout << "\t Welcome to VXM Moment Calculation ";
   cout << "\nPlease enter an lenght value: ";
   cin >> l;
   cout << "Please enter an weight value:";
