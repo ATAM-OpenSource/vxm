@@ -3,6 +3,10 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+
+// This program will change the speed rate of the motor. The working example is a follows:
+// .\vxm.speed.set.exe <value>
+
 using namespace std;
 
 int main(int argc, char *argv[]) {

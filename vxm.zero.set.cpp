@@ -3,6 +3,11 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+
+// This program will increase motor position by moving it and set 
+// the resulting location as zero. The working example is a follows:
+// .\vxm.speed.set.exe <value>
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
