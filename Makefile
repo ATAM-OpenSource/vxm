@@ -1,4 +1,8 @@
-all: vxm.reset.exe vxm.position.exe vxm.move.abs.exe  vxm.move.inc.exe vxm.speed.set.exe vxm.zero.set.exe vxm.acceleration.set.exe vxm.speed.get.exe vxm.speed.limit.exe
+all: vxm.reset.exe vxm.position.exe vxm.move.abs.exe  vxm.move.inc.exe vxm.speed.set.exe \
+	vxm.zero.set.exe vxm.acceleration.set.exe vxm.speed.get.exe vxm.speed.limit.exe \
+	vxm.weight.check.exe vxm.weight.limit.exe vxm.moment.limit.exe vxm.moment.check.exe
+
+vxm.moment.check.exe:
 
 VxmDriver.o:
 	g++ -c VxmDriver.cpp -o VxmDriver.o
@@ -27,8 +31,22 @@ vxm.acceleration.set.o:
 vxm.speed.get.o:
 	g++ -c vxm.speed.get.cpp -o vxm.speed.get.o
 
-vxm.speed.limit.o:
-	g++ -c vxm.speed.limit.cpp -o vxm.speed.limit.o
+
+
+vxm.speed.limit.exe:
+	g++ vxm.speed.limit.cpp -o vxm.speed.limit.exe
+
+vxm.weight.check.exe:
+	g++ vxm.weight.check.cpp -o vxm.weight.check.exe
+
+vxm.weight.limit.exe:
+	g++ vxm.weight.limit.cpp -o vxm.weight.limit.exe
+
+vxm.moment.limit.exe:
+	g++ vxm.moment.limit.cpp -o vxm.moment.limit.exe
+
+vxm.moment.check.exe:
+	g++ vxm.moment.check.cpp -o vxm.moment.check.exe
 	
 	
 
@@ -56,8 +74,7 @@ vxm.acceleration.set.exe: VxmDriver.o vxm.acceleration.set.o
 vxm.speed.get.exe: VxmDriver.o vxm.speed.get.o
 	g++ vxm.speed.get.o VxmDriver.o -o vxm.speed.get.exe
 
-vxm.speed.limit.exe: vxm.speed.limit.o
-	g++ vxm.speed.limit.o -o vxm.speed.limit.exe
+
 	
 clean:
 	del /Q /S *.o *.exe
