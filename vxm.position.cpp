@@ -3,6 +3,9 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+
+// This program will return current motor position. This program does not take arguments.
+
 using namespace std;
 
 int main() {

@@ -3,6 +3,10 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+
+// This program will rotate motor by requested value. The working example is a follows:
+// .\vxm.move.inc.exe <value>
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -11,15 +15,16 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	string input = string(argv[1]);
+	int step;
 	try {
-		int i = stoi(input);
+		step = (int)(stod(input)/360.0*7200.0);
 	}
 	catch (...){
 		cerr << "Please enter an integer!\n";
 		return 0;
 	}
     init();
-    PortSendCommands(&("C,I1M"+input+",R")[0]);
+    PortSendCommands(&("C,I1M"+to_string(step)+",R")[0]);
     //PortWaitForChar("^", 0);
 	cleanup();
     return 0;

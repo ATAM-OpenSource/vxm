@@ -2,6 +2,10 @@
 #include <string>
 #include <windows.h>
 #include "VxmDriver.h"
+
+// This program will reset the motor position to original zero point by moving the motor
+// to appropriate place. This program does not take arguments.
+
 using namespace std;
 
 void init(){

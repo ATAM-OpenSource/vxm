@@ -3,6 +3,11 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+
+// This program will change the acceleration rate of the motor. The working example is a follows:
+// .\vxm.acceleration.set.exe <value>
+// Note that value must be within 1 and 127.
+
 using namespace std;
 
 int main(int argc, char *argv[]) {

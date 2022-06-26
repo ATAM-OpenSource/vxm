@@ -5,6 +5,8 @@
 #include "commons.h"
 using namespace std;
 
+// This program will get approximate motor speed.
+
 int main() {
     init();
     int before = atoi(MotorPosition(1));
