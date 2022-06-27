@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include "param.h"
 
 //This program check the moment for rotary table. The working example is a follows:
 // .\vxm.moment.check.exe <weight lenght>
