@@ -1,5 +1,5 @@
 # VXM
-Executables for [Velmex Rotary Step Motor Control](https://www.velmex.com/Products/Controls/VXM_Controller.html) Commands to control [PK264-03A](https://catalog.orientalmotor.com/item/all-categories-legacy-products/tegories-pk-series-2-phase-stepping-motors-legacy-/pk264-03a) with [Velmex Rotary Table](https://www.velmex.com/Products/Rotary_Tables/Motorized-Rotary-Tables.html)
+32 bit executables for [Velmex Rotary Step Motor Control](https://www.velmex.com/Products/Controls/VXM_Controller.html) Commands to control [PK264-03A](https://catalog.orientalmotor.com/item/all-categories-legacy-products/tegories-pk-series-2-phase-stepping-motors-legacy-/pk264-03a) with [Velmex Rotary Table](https://www.velmex.com/Products/Rotary_Tables/Motorized-Rotary-Tables.html)
 
 * Please run Makefile with make in current directory on Windows to compile all executables. Should compile on g++ version 6.1 or higher.
 
