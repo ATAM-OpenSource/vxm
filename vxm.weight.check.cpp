@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, char *argv[])
 { 
 	string help = "This program check the weight limit  for rotary table. The working example is a follows:\n\
- .\\vxm.weight.check.exe <V()Vertical or H(Horizonal) Weight(Kg)>";
+ .\\vxm.weight.check.exe <V(Vertical) or H(Horizonal) Weight(Kg)>";
 	params(argc, argv, help);
     string p= argv[1];
 	double w= atof(argv[2]);

@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	}
 	string help = "This program will increase motor position by moving it and set \
 the resulting location as zero. The working example is a follows:\n\
-.\vxm.speed.set.exe <value>";
+.\\vxm.speed.set.exe <value>";
 	params(argc, argv, help);
 	string input = string(argv[1]);
 	int i;
