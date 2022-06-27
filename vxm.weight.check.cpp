@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include "param.h"
 using namespace std;
 //This program check the weight limit  for rotary table. The working example is a follows:
 // .\vxm.weight.check.exe <V or H Weight>
