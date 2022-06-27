@@ -2,11 +2,15 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include "param.h"
 using namespace std;
 //This program check the weight limit  for rotary table. The working example is a follows:
 // .\vxm.weight.check.exe <V or H Weight>
 int main(int argc, char *argv[])
 { 
+	string help = "This program check the weight limit  for rotary table. The working example is a follows:\n\
+ .\vxm.weight.check.exe <V()Vertical or H(Horizonal) Weight(Kg)>";
+	params(argc, argv, help);
     string p= argv[1];
 	double w= atof(argv[2]);
   	double vlimit =11.34,hlimit =90.71;
