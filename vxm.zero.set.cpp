@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+#include "param.h"
 
 // This program will increase motor position by moving it and set 
 // the resulting location as zero. The working example is a follows:
@@ -15,6 +16,10 @@ int main(int argc, char *argv[]) {
 		cerr << "Program needs one argument to work!\n";
 		return 0;
 	}
+	string help = "This program will increase motor position by moving it and set \
+the resulting location as zero. The working example is a follows:\n\
+.\vxm.speed.set.exe <value>";
+	params(argc, argv, help);
 	string input = string(argv[1]);
 	int i;
 	try {

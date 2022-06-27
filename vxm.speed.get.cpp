@@ -3,11 +3,15 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+#include "param.h"
 using namespace std;
 
 // This program will get approximate motor speed.
 
-int main() {
+int main(int argc, char *argv[]) {
+	string help = "This program will get approximate motor speed.";
+	params(argc, argv, help);
+    init();
     init();
     int before = atoi(MotorPosition(1));
 	Sleep(100);

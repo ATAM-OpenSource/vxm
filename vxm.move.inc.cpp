@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+#include "param.h"
 
 // This program will rotate motor by requested value. The working example is a follows:
 // .\vxm.move.inc.exe <value>
@@ -14,6 +15,9 @@ int main(int argc, char *argv[]) {
 		cerr << "Program needs one argument to work!\n";
 		return 0;
 	}
+	string help = "This program will rotate motor by requested value. The working example is a follows:\n\
+.\\vxm.move.inc.exe <value>";
+	params(argc, argv, help);
 	string input = string(argv[1]);
 	int step;
 	try {
