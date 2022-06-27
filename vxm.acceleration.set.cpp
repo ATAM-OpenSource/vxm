@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "VxmDriver.h"
 #include "commons.h"
+#include "param.h"
 
 // This program will change the acceleration rate of the motor. The working example is a follows:
 // .\vxm.acceleration.set.exe <value>
@@ -15,6 +16,10 @@ int main(int argc, char *argv[]) {
 		cerr << "Program needs one argument to work!\n";
 		return 0;
 	}
+	string help = "This program will change the acceleration rate of the motor. The working example is a follows:\n\
+.\\vxm.acceleration.set.exe <value>\n\
+Note that value must be within 1 and 127.";
+	params(argc, argv, help);
 	string input = string(argv[1]);
 	int acc;
 	try {
