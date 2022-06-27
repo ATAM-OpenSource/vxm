@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include "param.h"
 
 //This program check the moment for rotary table. The working example is a follows:
 // .\vxm.moment.check.exe <weight lenght>
@@ -10,6 +11,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 { 
+	string help = "This program check the moment for rotary table. The working example is a follows:\n\
+.\vxm.moment.check.exe <weight(Kg) lenght(cm)>";
+	params(argc, argv, help);
     double m= atof(argv[1]);
 	double l= atof(argv[2]);
   	double tlimit =56.4,t;
