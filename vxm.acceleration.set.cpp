@@ -21,9 +21,8 @@ int main(int argc, char *argv[]) {
 Note that value must be within 1 and 127.";
 	params(argc, argv, help);
 	string input = string(argv[1]);
-	int acc;
 	try {
-		acc = stoi(input);
+		int acc = stoi(input);
 		if(1>acc || 127<acc){
 			throw;
 		}
@@ -33,8 +32,7 @@ Note that value must be within 1 and 127.";
 		return 0;
 	}
     init();
-	string step = to_string((int)(acc*20));
-	PortSendCommands(&("C,A1M"+step+",R")[0]);
+	PortSendCommands(&("C,A1M"+input+",R")[0]);
 	PortWaitForChar("^", 0);
 	cleanup();
     return 0;

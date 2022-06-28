@@ -2,24 +2,13 @@
 #include <string>
 #include <windows.h>
 #include "VxmDriver.h"
+#include "commons.h"
 #include "param.h"
 
 // This program will reset the motor position to original zero point by moving the motor
 // to appropriate place. This program does not take arguments.
 
 using namespace std;
-
-void init(){
-	LoadDriver("VxmDriver.dll");
-	PortOpen(3, 9600);
-	PortClear();
-    PortSendCommands("F,C,R");
-}
-
-void cleanup(){
-	PortClose();
-	ReleaseDriver();
-}
 
 int main(int argc, char *argv[]) {
 	string help = "This program will reset the motor position to original zero point by moving the motor \
