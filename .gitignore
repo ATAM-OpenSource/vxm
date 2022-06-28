@@ -32,3 +32,5 @@
 *.app
 
 *.bak
+*.zip
+*.ini
