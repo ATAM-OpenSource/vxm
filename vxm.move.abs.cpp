@@ -32,7 +32,7 @@ Note that value must be within 0 and 360.";
 	}
     init();
     PortSendCommands(&("C,IA1M"+to_string(step)+",R")[0]);
-    PortWaitForChar("^", 0);
+    //PortWaitForChar("^", 0);
 	cleanup();
     return 0;
 }

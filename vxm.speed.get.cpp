@@ -13,9 +13,11 @@ int main(int argc, char *argv[]) {
 	params(argc, argv, help);
     init();
     int before = atoi(MotorPosition(1));
+	int bef_time = GetTickCount();
 	Sleep(100);
     int after = atoi(MotorPosition(1));
-	cout << "Speed: " <<(((double)(after-before))/7200.0)*600.0<<endl;
+	int aft_time = GetTickCount();
+	cout << "Speed: " <<(((double)(after-before))/7200.0)*(60000.0/((double)(aft_time-bef_time)))<<endl;
 	cleanup();
     return 0;
 }
