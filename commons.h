@@ -10,7 +10,7 @@ void init(){
 	LoadDriver("VxmDriver.dll");
 	unsigned int port = GetPrivateProfileInt("Settings", "Port", 0, ".\\settings.ini");
 	if (port==0){
-		for(int i=1; i<=99; i++){
+		for(int i=1; i<=255; i++){
 			if(PortOpen(i, 9600)){
 				port = i;
 				break;
