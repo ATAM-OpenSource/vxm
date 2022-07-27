@@ -3,6 +3,19 @@
 
 * Please run Makefile with make in current directory on Windows to compile all executables. Should compile on g++ version 4.8 or higher. Tested with MinGW g++ v8.1.0
 
+## Build on Windows
+### MSVC
+``` 
+cl.exe /c .\VxmDriver.cpp
+cl.exe /c <command.cpp> /EHsc
+link <command.obj> VxmDrive.obj user32.lib  
+```
+### Mingw
+```
+make
+```
+
+
 ### PDF links:
 * [Start Guide](https://github.com/ATAM-Anten/vxm/blob/main/docs/Quick%20Start%20Guide.pdf)
 * [Stepper Motor](https://github.com/ATAM-Anten/vxm/blob/main/docs/PK264-03A_StepperMotor.pdf)
